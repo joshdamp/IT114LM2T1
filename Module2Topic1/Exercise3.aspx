@@ -1,12 +1,7 @@
-﻿<%@ Page Language="C#" CodeBehind="~/Exercise3.aspx.cs"  Inherits="Module1Exercise1.Exercise3" %>
+﻿﻿<%@ Page Title="Final Grade Calculator" Language="C#" MasterPageFile="~/Site1.master" AutoEventWireup="true" CodeBehind="~/Exercise3.aspx.cs"  Inherits="Module1Exercise1.Exercise3" %>
 
 <%-- Exercise 3: Adding Logic to the WebPage --%>
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
+<asp:Content ID="Exercise3Content" ContentPlaceHolderID="MainContent" runat="server">
     <h1>What's my final grade?</h1>
     <form runat="server">
         <asp:Label runat="server" Text="Enter percentage value of your grade:"></asp:Label>
@@ -20,7 +15,4 @@
         <br />
         <asp:Label runat="server" Text="Final Grade: "></asp:Label>
         <asp:Label ID="finalGrade" runat="server" Text=""></asp:Label>
-        
-    </form>
-</body>
-</html>
+</asp:Content>

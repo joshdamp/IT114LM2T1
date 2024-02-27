@@ -11,7 +11,23 @@ namespace Module1Exercise1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
+        }
 
+        protected void Submit_Click(object sender, EventArgs e)
+        {
+            if (IsValid)
+            {
+                // Get the inputted values
+                string fullName = this.fullName.Text;
+                string age = this.age.Text;
+                string email = this.email.Text;
+
+                // Display the inputted values in the "result" label
+                result.Text = $"Full Name: {fullName}<br />" +
+                              $"Age: {age}<br />" +
+                              $"Email: {email}";
+            }
         }
     }
 }
